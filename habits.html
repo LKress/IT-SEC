@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="version" content="S5 1.1" />
+  <meta name="author" content="Luis Kress, Johannes Hausmann" />
+  <title>Ed25519</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!-- configuration parameters -->
+  <meta name="defaultView" content="slideshow" />
+  <meta name="controlVis" content="hidden" />
+  <!-- style sheet links -->
+  <link rel="stylesheet" href="s5/default/slides.css" type="text/css" media="projection" id="slideProj" />
+  <link rel="stylesheet" href="s5/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+  <link rel="stylesheet" href="s5/default/print.css" type="text/css" media="print" id="slidePrint" />
+  <link rel="stylesheet" href="s5/default/opera.css" type="text/css" media="projection" id="operaFix" />
+  <!-- S5 JS -->
+  <script src="s5/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="layout">
+<div id="controls"></div>
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+  <h1>23-10-2019</h1>
+  <h2>Breaking Ed25519 in WolfSSL</h2>
+</div>
+</div>
+<div class="presentation">
+<div class="title-slide slide">
+  <h1 class="title">Breaking Ed25519 in WolfSSL</h1>
+  <h3 class="author">Luis Kress, Johannes Hausmann</h3>
+  <h4 class="date">23-10-2019</h4>
+</div>
+<div id="beispiel" class="slide section level1">
+<h1>Beispiel</h1>
+</div>
+<div id="digitale-signatur-und-verschlüsselung-i" class="slide section level1">
+<h1>Digitale Signatur und Verschlüsselung I</h1>
+<ul>
+<li>Pendant der schriftlichen Signatur
+<ul>
+<li>Unterschrift auf Brief, Urkunde</li>
+</ul></li>
+<li>Dokument → Erklärung, Vereinbarung</li>
+<li>Nachweis
+<ul>
+<li>Inhalt des Dokument (Unterzeichner)</li>
+<li>Verifikation (Empfänger)</li>
+</ul></li>
+<li>Signatur ausschließlich durch Unterzeichner</li>
+<li>Verifikation soll jedem möglich sein</li>
+</ul>
+</div>
+<div id="digitale-signatur-und-verschlüsselung-ii" class="slide section level1">
+<h1>Digitale Signatur und Verschlüsselung II</h1>
+<ol style="list-style-type: decimal">
+<li>Eine digitale Signatur ist ein String, welcher eine Nachricht mit einer Entität verbindet</li>
+<li>Algorithmus zur Signaturerzeugung<br />
+</li>
+<li>Algorithmus zur Signaturverifikation</li>
+<li>Signatur Schema (signature scheme) → Erzeugung &amp; Verifikation</li>
+<li>Signaturprozess → Formatierung der Daten in signierbare Nachrichten</li>
+<li>Verfikationsprozess</li>
+</ol>
+</div>
+<div id="digitale-signatur-und-verschlüsselung-iii" class="slide section level1">
+<h1>Digitale Signatur und Verschlüsselung III</h1>
+<ul>
+<li><p>Realisierung durch assymetrische Kryptoalgorithmen</p></li>
+<li>Message</li>
+<li>K<sub>Priv</sub></li>
+<li>K<sub>Pub</sub></li>
+<li>Einwegfunktion <br /><span class="math display"><em>f</em>(<em>K</em> <em>P</em><em>r</em><em>i</em><em>v</em> ) = <em>K</em> <em>P</em><em>u</em><em>b</em> </span><br /></li>
+<li>inverse Funktionen
+<ul>
+<li>Signatur (Message, K<sub>Priv</sub>)</li>
+<li>Verifikation (Message, Signatur, K<sub>Pub</sub>)</li>
+</ul></li>
+<li><p>K<sub>Pub</sub> in öffentlichem Verzeichnis</p></li>
+</ul>
+</div>
+<div id="beispiel-für-verwendung-von-digitale-signaturen" class="slide section level1">
+<h1>Beispiel für Verwendung von Digitale Signaturen</h1>
+<ul>
+<li>SSL Zertifikat (CA)</li>
+<li>Software Installation auf Linux / BSD Systemen <img src="GPG.png" /></li>
+<li>Elektronische Steuerklärung</li>
+</ul>
+</div>
+<div id="edcsa-ed25519" class="slide section level1">
+<h1>EDCSA &amp; Ed25519</h1>
+<ul>
+<li>Signaturverfahren basierend auf Eliptic Curve Cryptography (EEC)
+<ul>
+<li>Basis ist eine Punktruppe einer Elliptischen Kurve</li>
+</ul></li>
+<li>RSA → Faktosisierungsproblem (Primzahlen)</li>
+<li>ECDSA ist verbereitet
+<ul>
+<li>EdDSA (Edwardscurve)</li>
+<li>Ed25519 (Edwardscurve 25519)</li>
+</ul></li>
+<li>160bit EEC Schlüssel = 1200bit RSA Schlüssel
+<ul>
+<li>Speicherverbrauch, Energieverbrauch (IoT)</li>
+</ul></li>
+<li>Verwendung
+<ul>
+<li>OpenSSH</li>
+<li>WolfSSL / OpenSSL / LibreSSL / GnuTLS</li>
+<li>Tor Protokoll</li>
+<li>DNS Protokolle</li>
+<li>Signal Messenger Protokoll</li>
+</ul></li>
+</ul>
+</div>
+<div id="ed25519-funktionsweise" class="slide section level1">
+<h1>Ed25519 Funktionsweise</h1>
+<p><strong>Tafelbild</strong></p>
+</div>
+<div id="secure-hash-sha512" class="slide section level1">
+<h1>Secure Hash “SHA512”</h1>
+<ul>
+<li>Ed25519 nutzt SHA512
+<ul>
+<li>Merkle–Damgård Konstruktion
+<ul>
+<li>Erweiterung um Davies-Meyer</li>
+</ul></li>
+<li>SHA-2 Familie (SHA256,SHA512) → Bitlänge des Hash</li>
+</ul></li>
+<li>Auxiliary Schlüssel b</li>
+</ul>
+<pre class="shell"><code>Message M (v. Länge) → SHA512 Funktion → 512 Bit Ausgabe</code></pre>
+</div>
+<div id="secure-hash-sha512-ii" class="slide section level1">
+<h1>Secure Hash “SHA512” II</h1>
+<p><img src="MD.png" /></p>
+</div>
+<div id="secure-hash-sha512-iii" class="slide section level1">
+<h1>Secure Hash “SHA512” III</h1>
+<ul>
+<li>Ausgabe 512 Bit</li>
+<li>Größe des internen Status 512 Bit</li>
+<li>Blockgröße 1024 Bit
+<ul>
+<li>16 Wörter</li>
+<li>Wortgröße von 64 Bit</li>
+</ul></li>
+<li>80 Runden</li>
+<li>Operationen auf Status
+<ul>
+<li>AND / XOR</li>
+<li>Addition (mod 2<sup>64</sup>)</li>
+</ul></li>
+</ul>
+</div>
+<div id="angriff-auf-ed25519" class="slide section level1">
+<h1>Angriff auf Ed25519</h1>
+<ul>
+<li><strong>Key Recovery</strong> Attacke
+<ul>
+<li>Energieverbrauch eines SOCs</li>
+</ul></li>
+<li>Angriff bei Berechnung der “flüchtigen” Schlüssel
+<ul>
+<li>von Interesse ist Schlüssel b</li>
+</ul></li>
+<li>Hilfsschlüssel r bekannt
+<ul>
+<li>Scalar a, Hilfsschlüssel b → manipulierte Signaturen</li>
+</ul></li>
+</ul>
+</div>
+<div id="angriff-auf-ed25519-ii" class="slide section level1">
+<h1>Angriff auf Ed25519 II</h1>
+</div>
+<div id="wolfssl" class="slide section level1">
+<h1>WolfSSL</h1>
+<ul>
+<li>embedded SSL Bibliothek in C geschrieben</li>
+<li>wolfCrypt → Cryptobibliothek</li>
+<li>geeignet für IoT, Smart Home etc..</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
