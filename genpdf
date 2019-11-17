@@ -1,0 +1,3 @@
+#!/bin/sh
+command -v pandoc >/dev/null || exit 1
+pandoc -s --toc Ed25519.md -t beamer  -o Ed25519.pdf -V lang=de
