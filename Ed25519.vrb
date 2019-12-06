@@ -1,0 +1,38 @@
+\frametitle{Angriff auf Ed25519 III}
+\protect\hypertarget{angriff-auf-ed25519-iii}{}
+\begin{itemize}
+\tightlist
+\item
+  64 bit unbekannte Bits
+
+  \begin{itemize}
+  \tightlist
+  \item
+    2\textsuperscript{64} mögliche Schlüssel
+  \end{itemize}
+\item
+  Divide-and-Conquer Strategie
+
+  \begin{itemize}
+  \tightlist
+  \item
+    8 Bit → 256 mögliche Schlüssel
+  \end{itemize}
+\end{itemize}
+
+\includegraphics[width=\textwidth,height=0.6\textheight]{Abbildungen/keyDPA.png}
+
+\begin{itemize}
+\tightlist
+\item
+  Hamming Weight wird berechnet (Anzahl Traces X Key Kandidaten)
+\item
+  Pearson Korrelation der Zeit (Time Samples, Hamming Weight )
+\end{itemize}
+
+\begin{verbatim}
+Zu jedem Schlüssel Kandidaten muss jedes
+Time sample eines Traces zugeordnet werden
+→ korrekte Ausrichtung für jeden Schlüssel
+→ Vergleichbarkeit
+\end{verbatim}
