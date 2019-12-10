@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2019.11.14)  10 DEC 2019 11:04
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2019.11.14)  10 DEC 2019 12:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1571,22 +1571,175 @@ File: Abbildungen/MD.png Graphic file (type bmp)
 ] [21
 
 ]
-File: Abbildungen/ITSEC(1).png Graphic file (type bmp)
-<Abbildungen/ITSEC(1).png>
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 1>
 
-Overfull \vbox (0.9936pt too high) detected at line 389
+Overfull \vbox (1.00127pt too high) detected at line 389
  []
 
 [22
 
 ]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 2>
+
+Overfull \vbox (1.00127pt too high) detected at line 394
+ []
+
+[23
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 3>
+
+Overfull \vbox (1.00127pt too high) detected at line 399
+ []
+
+[24
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 4>
+
+Overfull \vbox (1.00127pt too high) detected at line 404
+ []
+
+[25
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 5>
+
+Overfull \vbox (1.00127pt too high) detected at line 409
+ []
+
+[26
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 6>
+
+Overfull \vbox (1.00127pt too high) detected at line 414
+ []
+
+[27
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 7>
+
+Overfull \vbox (1.00127pt too high) detected at line 419
+ []
+
+[28
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 8>
+
+Overfull \vbox (1.00127pt too high) detected at line 424
+ []
+
+[29
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 9>
+
+Overfull \vbox (1.00127pt too high) detected at line 429
+ []
+
+[30
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 10>
+
+Overfull \vbox (1.00127pt too high) detected at line 434
+ []
+
+[31
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 11>
+
+Overfull \vbox (1.00127pt too high) detected at line 439
+ []
+
+[32
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 12>
+
+Overfull \vbox (1.00127pt too high) detected at line 444
+ []
+
+[33
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 13>
+
+Overfull \vbox (1.00127pt too high) detected at line 449
+ []
+
+[34
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 14>
+
+Overfull \vbox (1.00127pt too high) detected at line 454
+ []
+
+[35
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 15>
+
+Overfull \vbox (1.00127pt too high) detected at line 459
+ []
+
+[36
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 16>
+
+Overfull \vbox (1.00127pt too high) detected at line 464
+ []
+
+[37
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 17>
+
+Overfull \vbox (1.00127pt too high) detected at line 469
+ []
+
+[38
+
+]
+File: Abbildungen/ITSEC(1).png Graphic file (type bmp)
+<Abbildungen/ITSEC(1).png>
+
+Overfull \vbox (0.9936pt too high) detected at line 474
+ []
+
+[39
+
+]
 File: Abbildungen/Punkt4.png Graphic file (type bmp)
 <Abbildungen/Punkt4.png>
- [23
+ [40
 
-] [24
+] [41
 
-] [25
+] [42
 
 ]
 \openout4 = `Ed25519.vrb'.
@@ -1594,47 +1747,47 @@ File: Abbildungen/Punkt4.png Graphic file (type bmp)
  (./Ed25519.vrb
 File: Abbildungen/keyDPA.png Graphic file (type bmp)
 <Abbildungen/keyDPA.png>
-) [26
+) [43
 
 ]
 File: Abbildungen/cvDPA.png Graphic file (type bmp)
 <Abbildungen/cvDPA.png>
 
-Overfull \vbox (31.1843pt too high) detected at line 499
+Overfull \vbox (31.1843pt too high) detected at line 584
  []
 
-[27
+[44
 
 ]
 File: Abbildungen/ITSEC(1).png Graphic file (type bmp)
 <Abbildungen/ITSEC(1).png>
 
-Overfull \vbox (0.9936pt too high) detected at line 504
+Overfull \vbox (0.9936pt too high) detected at line 589
  []
 
-[28
+[45
 
 ]
 File: Abbildungen/Punkt5.png Graphic file (type bmp)
 <Abbildungen/Punkt5.png>
 
-Overfull \vbox (1.00377pt too high) detected at line 509
+Overfull \vbox (1.00377pt too high) detected at line 594
  []
 
-[29
+[46
 
-] [30
+] [47
 
 ]
 File: Abbildungen/ITSEC(1).png Graphic file (type bmp)
 <Abbildungen/ITSEC(1).png>
 
-Overfull \vbox (0.9936pt too high) detected at line 550
+Overfull \vbox (0.9936pt too high) detected at line 635
  []
 
-[31
+[48
 
-] [32
+] [49
 
 ]
 \tf@nav=\write5
@@ -1646,19 +1799,19 @@ Overfull \vbox (0.9936pt too high) detected at line 550
 \tf@snm=\write7
 \openout7 = `Ed25519.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 572.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 572.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 657.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 657.
  (./Ed25519.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 572.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 572.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 657.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 657.
  ) 
 Here is how much of TeX's memory you used:
- 38485 strings out of 492483
- 743791 string characters out of 6134978
+ 38558 strings out of 492483
+ 745145 string characters out of 6134978
  1059227 words of memory out of 5000000
- 42419 multiletter control sequences out of 15000+600000
+ 42491 multiletter control sequences out of 15000+600000
  538708 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,8n,115p,795b,545s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Ed25519.pdf (32 pages).
+Output written on Ed25519.pdf (49 pages).
