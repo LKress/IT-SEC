@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2019.11.14)  2 DEC 2019 18:23
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2019.11.14)  10 DEC 2019 10:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2076,10 +2076,10 @@ File: Abbildungen/GPG.png Graphic file (type bmp)
  [7
 
 ]
-File: Abbildungen/ITSEC(1).png Graphic file (type bmp)
-<Abbildungen/ITSEC(1).png>
+File: Abbildungen/ITSEC(1)_res.png Graphic file (type bmp)
+<Abbildungen/ITSEC(1)_res.png>
 
-Overfull \vbox (0.9878pt too high) detected at line 228
+Overfull \vbox (0.99791pt too high) detected at line 228
  []
 
 [8
@@ -2267,10 +2267,10 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 566.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 566.
  ) 
 Here is how much of TeX's memory you used:
- 39069 strings out of 492483
- 759695 string characters out of 6134978
+ 39078 strings out of 492483
+ 759911 string characters out of 6134978
  1077879 words of memory out of 5000000
- 42951 multiletter control sequences out of 15000+600000
+ 42959 multiletter control sequences out of 15000+600000
  539209 words of font info for 108 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  67i,8n,115p,795b,544s stack positions out of 5000i,500n,10000p,200000b,80000s
