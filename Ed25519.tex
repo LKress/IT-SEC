@@ -3,7 +3,7 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-  9pt,
+  10pt,
   ignorenonframetext,
   aspectratio=169,
 ]{beamer}
@@ -45,7 +45,7 @@
 \AtBeginSubsection{
   \frame{\subsectionpage}
 }
-\usepackage[]{roboto}
+\usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -128,15 +128,8 @@
 \begin{frame}{Digitale Signatur und Verschlüsselung I}
 \protect\hypertarget{digitale-signatur-und-verschluxfcsselung-i}{}
 \begin{itemize}
-\tightlist
 \item
   Pendant der schriftlichen Signatur
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Unterschrift auf Brief, Urkunde
-  \end{itemize}
 \item
   Dokument → Erklärung, Vereinbarung
 \item
@@ -182,7 +175,7 @@
 \protect\hypertarget{digitale-signatur-und-verschluxfcsselung-iii}{}
 \begin{itemize}
 \item
-  Realisierung durch assymetrische Kryptoalgorithmen
+  Realisierung durch asymetrische Kryptoalgorithmen
 \item
   Message
 \item
@@ -224,7 +217,7 @@
 
 \begin{frame}{}
 \protect\hypertarget{section}{}
-\includegraphics{Abbildungen/ITSEC(1).png}
+\includegraphics{Abbildungen/ITSEC(1)_res.png}
 \end{frame}
 
 \begin{frame}{}
@@ -232,32 +225,45 @@
 \includegraphics{Abbildungen/Punkt1.png}
 \end{frame}
 
-\begin{frame}{EDCSA \& Ed25519}
-\protect\hypertarget{edcsa-ed25519}{}
+\begin{frame}{ECDSA \& Ed25519}
+\protect\hypertarget{ecdsa-ed25519}{}
 \begin{itemize}
 \tightlist
 \item
-  Signaturverfahren basierend auf Eliptic Curve Cryptography (EEC)
+  Signaturverfahren basierend auf Eliptic Curve Cryptography (ECC)
 
   \begin{itemize}
   \tightlist
   \item
     Basis ist eine Punktruppe einer Elliptischen Kurve
   \end{itemize}
-\item
-  RSA → Faktosisierungsproblem (Primzahlen)
+\end{itemize}
+
+\pause
+
+\begin{itemize}
 \item
   ECDSA ist verbereitet
+
+  \pause
 
   \begin{itemize}
   \tightlist
   \item
     EdDSA (Edwardscurve)
+  \end{itemize}
+
+  \pause
+
+  \begin{itemize}
+  \tightlist
   \item
     Ed25519 (Edwardscurve 25519)
   \end{itemize}
+
+  \pause
 \item
-  160bit EEC Schlüssel = 1200bit RSA Schlüssel
+  160bit ECC Schlüssel = 1200bit RSA Schlüssel
 
   \begin{itemize}
   \tightlist
@@ -268,8 +274,8 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{EDCSA \& Ed25519}
-\protect\hypertarget{edcsa-ed25519-1}{}
+\begin{frame}{ECDSA \& Ed25519}
+\protect\hypertarget{ecdsa-ed25519-1}{}
 \begin{itemize}
 \tightlist
 \item
@@ -288,9 +294,9 @@
   \item
     Signal Messenger Protokoll
   \end{itemize}
-\end{itemize}
 
-\includegraphics{Abbildungen/openssh.png}
+  \includegraphics[width=\textwidth,height=0.5\textheight]{Abbildungen/openssh.png}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Ed25519 Funktionsweise}
@@ -333,7 +339,7 @@
 \end{itemize}
 
 \begin{verbatim}
-Message M (v. Länge) → SHA512 Funktion → 512 Bit Ausgabe
+Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \end{verbatim}
 
 (Susella 2018)
@@ -433,7 +439,7 @@ Message M (v. Länge) → SHA512 Funktion → 512 Bit Ausgabe
     Energieverbrauch an einem Punkt der Encryption
   \end{itemize}
 \item
-  Zwischenwert (Interdemediate Value)
+  Zwischenwert (Intermediate Value)
 
   \begin{itemize}
   \tightlist
@@ -444,7 +450,7 @@ Message M (v. Länge) → SHA512 Funktion → 512 Bit Ausgabe
   \end{itemize}
 \end{itemize}
 
-\[ f(d,k) = Value \]
+\[ S(M,k) = Value \]
 \end{frame}
 
 \begin{frame}[fragile]{Angriff auf Ed25519 III}
