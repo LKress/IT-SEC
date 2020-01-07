@@ -10,6 +10,12 @@
   \item
     2\textsuperscript{64} mögliche Schlüssel
   \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Divide-and-Conquer Strategie
 
@@ -20,12 +26,22 @@
   \end{itemize}
 \end{itemize}
 
+\pause
+
 \includegraphics[width=\textwidth,height=0.6\textheight]{Abbildungen/keyDPA.png}
+
+\pause
 
 \begin{itemize}
 \tightlist
 \item
   Hamming Weight wird berechnet (Anzahl Traces X Key Kandidaten)
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Pearson Korrelation der Zeit (Time Samples, Hamming Weight )
 \end{itemize}

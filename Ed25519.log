@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2019.11.14)  10 DEC 2019 12:17
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Arch Linux) (preloaded format=xelatex 2019.11.14)  7 JAN 2020 16:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1087,12 +1087,12 @@ LaTeX Font Info:    ... okay on input line 118.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 398.3386pt, 28.45274pt)
-* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
-* \paperwidth=455.24408pt
-* \paperheight=256.0748pt
-* \textwidth=398.3386pt
-* \textheight=227.62207pt
+* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=307.28987pt
+* \textheight=244.6939pt
 * \oddsidemargin=-43.81725pt
 * \evensidemargin=-43.81725pt
 * \topmargin=-72.26999pt
@@ -1440,28 +1440,28 @@ File: Abbildungen/TH-Bingen-Logo-schwarz-50.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 151.
+(Font)              scaled to size 7.0pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 151.
+(Font)              scaled to size 5.0pt on input line 177.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-51.
+77.
 
 (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 151.
+(Font)              scaled to size 10.00107pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 151.
+(Font)              scaled to size 7.00075pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 151.
+(Font)              scaled to size 5.00053pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 151.
+(Font)              scaled to size 9.99893pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 151.
+(Font)              scaled to size 6.99925pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 151.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 151
+(Font)              scaled to size 4.99947pt on input line 177.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 177
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1470,7 +1470,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 151
+LaTeX Font Info:    Trying to load font information for U+msb on input line 177
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1480,266 +1480,380 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 151.
+(Font)              scaled to size 9.0pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 151.
+(Font)              scaled to size 6.0pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.00096pt on input line 151.
+(Font)              scaled to size 9.00096pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 151.
+(Font)              scaled to size 6.00064pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 151.
+(Font)              scaled to size 8.99904pt on input line 177.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 151.
+(Font)              scaled to size 5.99936pt on input line 177.
  [4
 
 ] [5
 
 ] [6
 
+] [7
+
+] [8
+
+]
+[9
+
+] [10
+
 ]
 File: Abbildungen/GPG.png Graphic file (type bmp)
 <Abbildungen/GPG.png>
- [7
+ [11
 
 ]
 File: Abbildungen/ITSEC(1)_res.png Graphic file (type bmp)
 <Abbildungen/ITSEC(1)_res.png>
 
-Overfull \vbox (0.993pt too high) detected at line 221
+Overfull \vbox (0.99174pt too high) detected at line 245
  []
 
-[8
+[12
 
 ]
 File: Abbildungen/Punkt1.png Graphic file (type bmp)
 <Abbildungen/Punkt1.png>
 
-Overfull \vbox (0.99982pt too high) detected at line 226
+Overfull \vbox (0.99171pt too high) detected at line 250
  []
 
-[9
-
-] [10
-
-] [11
-
-] [12
-
-] [13
+[13
 
 ] [14
+
+] [15
+
+] [16
+
+] [17
+
+] [18
 
 ]
 File: Abbildungen/openssh.png Graphic file (type bmp)
 <Abbildungen/openssh.png>
- [15
+ [19
 
-] [16
+] [20
 
 ]
 File: Abbildungen/ITSEC(1).png Graphic file (type bmp)
 <Abbildungen/ITSEC(1).png>
 
-Overfull \vbox (0.9936pt too high) detected at line 310
+Overfull \vbox (0.99434pt too high) detected at line 335
  []
 
-[17
+[21
 
 ]
 File: Abbildungen/Punkt2.png Graphic file (type bmp)
 <Abbildungen/Punkt2.png>
- [18
+ [22
 
 ]
 \openout4 = `Ed25519.vrb'.
 
  (./Ed25519.vrb
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 16.
+(Font)              scaled to size 8.0pt on input line 15.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 16.
+(Font)              scaled to size 8.00085pt on input line 15.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 16.
-) [19
+(Font)              scaled to size 7.99915pt on input line 15.
+) [23
 
 ]
 File: Abbildungen/MD.png Graphic file (type bmp)
 <Abbildungen/MD.png>
- [20
+ [24
 
-] [21
+] [25
+
+] [26
+
+] [27
+
+] [28
+
+] [29
+
+] [30
+
+] [31
 
 ]
 File: SHAFunkt.pdf Graphic file (type pdf)
 <use SHAFunkt.pdf, page 1>
 
-Overfull \vbox (1.00127pt too high) detected at line 389
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 450--450
+[][]  
  []
 
-[22
 
-]
-File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 2>
-
-Overfull \vbox (1.00127pt too high) detected at line 394
- []
-
-[23
-
-]
-File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 3>
-
-Overfull \vbox (1.00127pt too high) detected at line 399
- []
-
-[24
-
-]
-File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 4>
-
-Overfull \vbox (1.00127pt too high) detected at line 404
- []
-
-[25
-
-]
-File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 5>
-
-Overfull \vbox (1.00127pt too high) detected at line 409
- []
-
-[26
-
-]
-File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 6>
-
-Overfull \vbox (1.00127pt too high) detected at line 414
- []
-
-[27
-
-]
-File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 7>
-
-Overfull \vbox (1.00127pt too high) detected at line 419
- []
-
-[28
-
-]
-File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 8>
-
-Overfull \vbox (1.00127pt too high) detected at line 424
- []
-
-[29
-
-]
-File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 9>
-
-Overfull \vbox (1.00127pt too high) detected at line 429
- []
-
-[30
-
-]
-File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 10>
-
-Overfull \vbox (1.00127pt too high) detected at line 434
- []
-
-[31
-
-]
-File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 11>
-
-Overfull \vbox (1.00127pt too high) detected at line 439
+Overfull \vbox (1.00002pt too high) detected at line 450
  []
 
 [32
 
 ]
 File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 12>
+<use SHAFunkt.pdf, page 2>
 
-Overfull \vbox (1.00127pt too high) detected at line 444
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 455--455
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 455
  []
 
 [33
 
 ]
 File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 13>
+<use SHAFunkt.pdf, page 3>
 
-Overfull \vbox (1.00127pt too high) detected at line 449
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 460--460
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 460
  []
 
 [34
 
 ]
 File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 14>
+<use SHAFunkt.pdf, page 4>
 
-Overfull \vbox (1.00127pt too high) detected at line 454
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 465--465
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 465
  []
 
 [35
 
 ]
 File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 15>
+<use SHAFunkt.pdf, page 5>
 
-Overfull \vbox (1.00127pt too high) detected at line 459
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 470--470
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 470
  []
 
 [36
 
 ]
 File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 16>
+<use SHAFunkt.pdf, page 6>
 
-Overfull \vbox (1.00127pt too high) detected at line 464
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 475--475
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 475
  []
 
 [37
 
 ]
 File: SHAFunkt.pdf Graphic file (type pdf)
-<use SHAFunkt.pdf, page 17>
+<use SHAFunkt.pdf, page 7>
 
-Overfull \vbox (1.00127pt too high) detected at line 469
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 480--480
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 480
  []
 
 [38
 
 ]
-File: Abbildungen/ITSEC(1).png Graphic file (type bmp)
-<Abbildungen/ITSEC(1).png>
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 8>
 
-Overfull \vbox (0.9936pt too high) detected at line 474
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 485--485
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 485
  []
 
 [39
 
 ]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 9>
+
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 490--490
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 490
+ []
+
+[40
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 10>
+
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 495--495
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 495
+ []
+
+[41
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 11>
+
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 500--500
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 500
+ []
+
+[42
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 12>
+
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 505--505
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 505
+ []
+
+[43
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 13>
+
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 510--510
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 510
+ []
+
+[44
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 14>
+
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 515--515
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 515
+ []
+
+[45
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 15>
+
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 520--520
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 520
+ []
+
+[46
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 16>
+
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 525--525
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 525
+ []
+
+[47
+
+]
+File: SHAFunkt.pdf Graphic file (type pdf)
+<use SHAFunkt.pdf, page 17>
+
+Overfull \hbox (3.82898pt too wide) in paragraph at lines 530--530
+[][]  
+ []
+
+
+Overfull \vbox (1.00002pt too high) detected at line 530
+ []
+
+[48
+
+]
+File: Abbildungen/ITSEC(1).png Graphic file (type bmp)
+<Abbildungen/ITSEC(1).png>
+
+Overfull \vbox (0.99434pt too high) detected at line 535
+ []
+
+[49
+
+]
 File: Abbildungen/Punkt4.png Graphic file (type bmp)
 <Abbildungen/Punkt4.png>
- [40
+ [50
 
-] [41
+] [51
 
-] [42
+] [52
+
+] [53
+
+] [54
+
+] [55
+
+] [56
 
 ]
 \openout4 = `Ed25519.vrb'.
@@ -1747,47 +1861,69 @@ File: Abbildungen/Punkt4.png Graphic file (type bmp)
  (./Ed25519.vrb
 File: Abbildungen/keyDPA.png Graphic file (type bmp)
 <Abbildungen/keyDPA.png>
-) [43
+) [57
+
+] (./Ed25519.vrb
+File: Abbildungen/keyDPA.png Graphic file (type bmp)
+<Abbildungen/keyDPA.png>
+)
+[58
+
+] (./Ed25519.vrb
+File: Abbildungen/keyDPA.png Graphic file (type bmp)
+<Abbildungen/keyDPA.png>
+) [59
+
+] (./Ed25519.vrb
+File: Abbildungen/keyDPA.png Graphic file (type bmp)
+<Abbildungen/keyDPA.png>
+) [60
+
+] (./Ed25519.vrb
+File: Abbildungen/keyDPA.png Graphic file (type bmp)
+<Abbildungen/keyDPA.png>
+) [61
 
 ]
 File: Abbildungen/cvDPA.png Graphic file (type bmp)
 <Abbildungen/cvDPA.png>
 
-Overfull \vbox (31.1843pt too high) detected at line 584
+Overfull \vbox (29.04697pt too high) detected at line 681
  []
 
-[44
+[62
 
 ]
 File: Abbildungen/ITSEC(1).png Graphic file (type bmp)
 <Abbildungen/ITSEC(1).png>
 
-Overfull \vbox (0.9936pt too high) detected at line 589
+Overfull \vbox (0.99434pt too high) detected at line 686
  []
 
-[45
+[63
 
 ]
 File: Abbildungen/Punkt5.png Graphic file (type bmp)
 <Abbildungen/Punkt5.png>
+ [64
 
-Overfull \vbox (1.00377pt too high) detected at line 594
- []
+] [65
 
-[46
+] [66
 
-] [47
+] [67
 
-]
-File: Abbildungen/ITSEC(1).png Graphic file (type bmp)
-<Abbildungen/ITSEC(1).png>
+] [68
 
-Overfull \vbox (0.9936pt too high) detected at line 635
- []
+] [69
 
-[48
+] [70
 
-] [49
+] [71
+
+] [72
+
+] [73
 
 ]
 \tf@nav=\write5
@@ -1799,19 +1935,19 @@ Overfull \vbox (0.9936pt too high) detected at line 635
 \tf@snm=\write7
 \openout7 = `Ed25519.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 657.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 657.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 801.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 801.
  (./Ed25519.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 657.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 657.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 801.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 801.
  ) 
 Here is how much of TeX's memory you used:
- 38558 strings out of 492483
- 745145 string characters out of 6134978
- 1059227 words of memory out of 5000000
- 42491 multiletter control sequences out of 15000+600000
+ 38568 strings out of 492483
+ 745257 string characters out of 6134978
+ 1060228 words of memory out of 5000000
+ 42493 multiletter control sequences out of 15000+600000
  538708 words of font info for 74 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,8n,115p,795b,545s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,8n,115p,795b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Ed25519.pdf (49 pages).
+Output written on Ed25519.pdf (73 pages).

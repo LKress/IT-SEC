@@ -5,7 +5,7 @@
 \documentclass[
   10pt,
   ignorenonframetext,
-  aspectratio=169,
+  aspectratio=43,
 ]{beamer}
 \usepackage{pgfpages}
 \setbeamertemplate{caption}[numbered]
@@ -111,7 +111,7 @@
 
 \title{Breaking Ed25519 in WolfSSL}
 \author{Luis Kress, Johannes Hausmann}
-\date{23-10-2019}
+\date{30-01-2020}
 \institute{Technische Hochschule Bingen}
 \titlegraphic{\includegraphics{Abbildungen/TH-Bingen-Logo-schwarz-50.png}}
 
@@ -128,10 +128,23 @@
 \begin{frame}{Digitale Signatur und Verschlüsselung I}
 \protect\hypertarget{digitale-signatur-und-verschluxfcsselung-i}{}
 \begin{itemize}
+\tightlist
 \item
   Pendant der schriftlichen Signatur
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Dokument → Erklärung, Vereinbarung
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Nachweis
 
@@ -142,12 +155,25 @@
   \item
     Verifikation (Empfänger)
   \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Signatur ausschließlich durch Unterzeichner
-\item
-  Verifikation soll jedem möglich sein\\
-  siehe (Hühnlein and Korte 2006)
 \end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Verifikation soll jedem möglich sein
+\end{itemize}
+
+siehe (Hühnlein and Korte 2006)
 \end{frame}
 
 \begin{frame}{Digitale Signatur und Verschlüsselung II}
@@ -179,9 +205,7 @@
 \item
   Message
 \item
-  K\textsubscript{Priv}
-\item
-  K\textsubscript{Pub}
+  K\textsubscript{Priv} , K\textsubscript{Pub}
 \item
   Einwegfunktion \[f(K~Priv~) = K~Pub~\]
 \item
@@ -268,10 +292,11 @@
   \begin{itemize}
   \tightlist
   \item
-    Speicherverbrauch, Energieverbrauch (IoT)\\
-    siehe (Hühnlein and Korte 2006; Susella 2018)
+    Speicherverbrauch, Energieverbrauch (IoT)
   \end{itemize}
 \end{itemize}
+
+siehe (Hühnlein and Korte 2006; Susella 2018)
 \end{frame}
 
 \begin{frame}{ECDSA \& Ed25519}
@@ -294,9 +319,9 @@
   \item
     Signal Messenger Protokoll
   \end{itemize}
-
-  \includegraphics[width=\textwidth,height=0.5\textheight]{Abbildungen/openssh.png}
 \end{itemize}
+
+\includegraphics[width=\textwidth,height=0.5\textheight]{Abbildungen/openssh.png}
 \end{frame}
 
 \begin{frame}{Ed25519 Funktionsweise}
@@ -317,7 +342,6 @@
 \begin{frame}[fragile]{Secure Hash ``SHA512''}
 \protect\hypertarget{secure-hash-sha512}{}
 \begin{itemize}
-\tightlist
 \item
   Ed25519 nutzt SHA512
 
@@ -356,20 +380,45 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \tightlist
 \item
   Ausgabe 512 Bit
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Größe des internen Status 512 Bit
+\end{itemize}
+
+\pause
+
+\begin{itemize}
 \item
   Blockgröße 1024 Bit
+
+  \pause
 
   \begin{itemize}
   \tightlist
   \item
     16 Wörter
+  \end{itemize}
+
+  \pause
+
+  \begin{itemize}
+  \tightlist
   \item
     Wortgröße von 64 Bit
   \end{itemize}
 \item
   80 Runden
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Operationen auf Status
 
@@ -378,8 +427,20 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     AND / XOR
   \item
-    Addition (mod 2\textsuperscript{64}) (Susella 2018)
+    Addition (mod 2\textsuperscript{64})
   \end{itemize}
+\end{itemize}
+
+(Susella 2018)
+\end{frame}
+
+\begin{frame}{Übergabewerte für SHA512}
+\protect\hypertarget{uxfcbergabewerte-fuxfcr-sha512}{}
+\begin{itemize}
+\item
+  Wörter 0-4 = Private Key (256 Bit)
+\item
+  Wörter 5-15 = Message
 \end{itemize}
 \end{frame}
 
@@ -490,16 +551,28 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     Energieverbrauch eines SOCs
   \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
-  Angriff bei Berechnung der ``flüchtigen'' Schlüssel
+  Angriff bei Berechnung des ``flüchtigen'' privaten Schlüssels
 
   \begin{itemize}
   \tightlist
   \item
-    von Interesse ist Schlüssel b
+    von Interesse ist Hilfschlüssel b
   \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
-  Hilfsschlüssel r bekannt
+  Flüchtiger Schlüssel r bekannt
 
   \begin{itemize}
   \tightlist
@@ -523,6 +596,12 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     Energieverbrauch an einem Punkt der Encryption
   \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Zwischenwert (Intermediate Value)
 
@@ -534,6 +613,8 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
     Wert als Funktion darstellbar
   \end{itemize}
 \end{itemize}
+
+\pause
 
 \[ S(M,k) = Value \]
 \end{frame}
@@ -550,6 +631,12 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     2\textsuperscript{64} mögliche Schlüssel
   \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Divide-and-Conquer Strategie
 
@@ -560,12 +647,22 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \end{itemize}
 \end{itemize}
 
+\pause
+
 \includegraphics[width=\textwidth,height=0.6\textheight]{Abbildungen/keyDPA.png}
+
+\pause
 
 \begin{itemize}
 \tightlist
 \item
   Hamming Weight wird berechnet (Anzahl Traces X Key Kandidaten)
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Pearson Korrelation der Zeit (Time Samples, Hamming Weight )
 \end{itemize}
@@ -596,8 +693,15 @@ Time sample eines Traces zugeordnet werden
 \begin{frame}{Verbesserung \& Gegenmaßnahmen}
 \protect\hypertarget{verbesserung-gegenmauxdfnahmen}{}
 \begin{itemize}
+\tightlist
 \item
   Schlüssel \& Nachricht nicht gemeinsam in Kompressionsfunktion
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Padding bereits bei Schlüssel durchführen
 
@@ -606,6 +710,12 @@ Time sample eines Traces zugeordnet werden
   \item
     Random Werte
   \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Vorteil
 
@@ -616,6 +726,12 @@ Time sample eines Traces zugeordnet werden
   \item
     Implemetierung des SHA wird geändert
   \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   Nachteil für IoT
 
@@ -629,9 +745,37 @@ Time sample eines Traces zugeordnet werden
 \end{itemize}
 \end{frame}
 
-\begin{frame}{}
-\protect\hypertarget{section-25}{}
-\includegraphics{Abbildungen/ITSEC(1).png}
+\begin{frame}{IN A NUTSHELL}
+\protect\hypertarget{in-a-nutshell}{}
+\begin{itemize}
+\tightlist
+\item
+  Signaturerzeugung
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  geheime Schlüssel errechnen
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Schwachstelle = ``fahrlässige'' \textbf{Nutzung} des SHA512
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Fehlerhafte Implementierung → leichte Gegenmaßnahme
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Literatur}
