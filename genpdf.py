@@ -24,7 +24,7 @@ print(pdffile)
 output = pypandoc.convert_file(sys.argv[1],'beamer', '--toc',outputfile=texlive)
 '''
 filters = ['pandoc-citeproc']
-pdoc_args=['-s', '--toc','--number-sections', '-V lang=de']
+pdoc_args=['-s', '--toc','--number-sections','--include-in-header=header.tex','-V lang=de']
 output = pypandoc.convert_file(sys.argv[1],
                                to='beamer',
                                format='md',
