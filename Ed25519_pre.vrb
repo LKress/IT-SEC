@@ -1,0 +1,28 @@
+\frametitle{Secure Hash ``SHA512''}
+\protect\hypertarget{secure-hash-sha512}{}
+\begin{itemize}
+\item
+  Ed25519 nutzt SHA512
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Merkle--Damgård Konstruktion
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Erweiterung um Davies-Meyer
+    \end{itemize}
+  \item
+    SHA-2 Familie (SHA256,SHA512) → Bitlänge des Hash
+  \end{itemize}
+\item
+  Auxiliary Schlüssel b
+\end{itemize}
+
+\begin{verbatim}
+Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
+\end{verbatim}
+
+(Susella 2018)

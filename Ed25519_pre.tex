@@ -125,23 +125,10 @@
 \begin{frame}{Digitale Signatur und Verschlüsselung I}
 \protect\hypertarget{digitale-signatur-und-verschluxfcsselung-i}{}
 \begin{itemize}
-\tightlist
 \item
   Pendant der schriftlichen Signatur
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Dokument → Erklärung, Vereinbarung
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Nachweis
 
@@ -152,20 +139,8 @@
   \item
     Verifikation (Empfänger)
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Signatur ausschließlich durch Unterzeichner
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Verifikation soll jedem möglich sein
 \end{itemize}
@@ -249,7 +224,6 @@ siehe (Hühnlein and Korte 2006)
 \begin{frame}{ECDSA \& Ed25519}
 \protect\hypertarget{ecdsa-ed25519}{}
 \begin{itemize}
-\tightlist
 \item
   Signaturverfahren basierend auf Eliptic Curve Cryptography (ECC)
 
@@ -258,31 +232,15 @@ siehe (Hühnlein and Korte 2006)
   \item
     Basis ist eine Punktruppe einer Elliptischen Kurve
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
 \item
   ECDSA ist verbereitet
 
-  \pause
-
   \begin{itemize}
-  \tightlist
   \item
     EdDSA (Edwardscurve)
-  \end{itemize}
-
-  \pause
-
-  \begin{itemize}
-  \tightlist
   \item
     Ed25519 (Edwardscurve 25519)
   \end{itemize}
-
-  \pause
 \item
   160bit ECC Schlüssel = 1200bit RSA Schlüssel
 
@@ -374,65 +332,28 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \begin{frame}{Secure Hash ``SHA512'' III}
 \protect\hypertarget{secure-hash-sha512-iii}{}
 \begin{itemize}
-\tightlist
 \item
   Ausgabe 512 Bit
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Größe des internen Status 512 Bit
-\end{itemize}
-
-\pause
-
-\begin{itemize}
 \item
   Message expansion auf 80 schedulde words
-
-  \pause
 
   \begin{itemize}
   \item
     Messageblock 1024 Bit
 
-    \pause
-
     \begin{itemize}
-    \tightlist
     \item
       16 Wörter
-    \end{itemize}
-
-    \pause
-
-    \begin{itemize}
-    \tightlist
     \item
       Wortgröße von 64 Bit
     \end{itemize}
   \end{itemize}
 \item
   80 mal Rundenfunktion auf schedule words
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Operationen auf Status
-
-  \begin{itemize}
-  \tightlist
-  \item
-    AND / XOR
-  \item
-    Addition (mod 2\textsuperscript{64})
-  \end{itemize}
 \end{itemize}
 
 (Susella 2018)
@@ -555,12 +476,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     Energieverbrauch eines SOCs
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Angriff bei Berechnung des ``flüchtigen'' privaten Schlüssels
 
@@ -569,12 +484,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     von Interesse ist Hilfschlüssel b
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Flüchtiger Schlüssel r bekannt
 
@@ -600,12 +509,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     Energieverbrauch an einem Punkt der Encryption
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Zwischenwert (Intermediate Value)
 
@@ -618,12 +521,10 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \end{itemize}
 \end{itemize}
 
-\pause
-
 \[ S(M,k) = Value \]
 \end{frame}
 
-\begin{frame}[fragile]{Angriff auf Ed25519 III}
+\begin{frame}{Angriff auf Ed25519 III}
 \protect\hypertarget{angriff-auf-ed25519-iii}{}
 \begin{itemize}
 \tightlist
@@ -635,12 +536,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     2\textsuperscript{64} mögliche Schlüssel
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Divide-and-Conquer Strategie
 
@@ -651,32 +546,14 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \end{itemize}
 \end{itemize}
 
-\pause
-
 \includegraphics[width=\textwidth,height=0.6\textheight]{Abbildungen/keyDPA.png}
 
-\pause
-
 \begin{itemize}
-\tightlist
 \item
   Hamming Weight wird berechnet (Anzahl Traces X Key Kandidaten)
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Pearson Korrelation der Zeit (Time Samples, Hamming Weight )
 \end{itemize}
-
-\begin{verbatim}
-Zu jedem Schlüssel Kandidaten muss jedes    
-Time sample eines Traces zugeordnet werden    
-→ korrekte Ausrichtung für jeden Schlüssel  
-→ Vergleichbarkeit
-\end{verbatim}
 \end{frame}
 
 \begin{frame}{Angriff auf Ed25519 IIII}
@@ -697,15 +574,8 @@ Time sample eines Traces zugeordnet werden
 \begin{frame}{Verbesserung \& Gegenmaßnahmen}
 \protect\hypertarget{verbesserung-gegenmauxdfnahmen}{}
 \begin{itemize}
-\tightlist
 \item
   Schlüssel \& Nachricht nicht gemeinsam in Kompressionsfunktion
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Padding bereits bei Schlüssel durchführen
 
@@ -714,12 +584,6 @@ Time sample eines Traces zugeordnet werden
   \item
     Random Werte
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Vorteil
 
@@ -730,12 +594,6 @@ Time sample eines Traces zugeordnet werden
   \item
     Implemetierung des SHA wird geändert
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Nachteil für IoT
 
@@ -752,31 +610,12 @@ Time sample eines Traces zugeordnet werden
 \begin{frame}{IN A NUTSHELL}
 \protect\hypertarget{in-a-nutshell}{}
 \begin{itemize}
-\tightlist
 \item
   Signaturerzeugung
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   geheime Schlüssel errechnen
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
-  Schwachstelle = ``fahrlässige'' \textbf{Nutzung} des SHA512
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
+  Schwachstelle = ``fahrlässige'' \textbf{Implemetierung} des SHA512
 \item
   Fehlerhafte Implementierung → leichte Gegenmaßnahme
 \end{itemize}
