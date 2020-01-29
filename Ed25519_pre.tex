@@ -3,7 +3,7 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-  11 pt,
+  10pt,
   ignorenonframetext,
   aspectratio=43,
 ]{beamer}
@@ -111,8 +111,6 @@
   {\par}
 
 \title{Breaking Ed25519 in WolfSSL}
-\subtitle{Niels Samwel, Leijla Batina, Guido Bertoni, Joan Daemen,
-Ruggero Susella}
 \author{Luis Kress, Johannes Hausmann}
 \date{30-01-2020}
 \institute{Technische Hochschule Bingen}
@@ -124,30 +122,13 @@ Ruggero Susella}
 \begin{frame}[allowframebreaks]
   \tableofcontents[hideallsubsections]
 \end{frame}
-\begin{frame}
-\includegraphics{Abbildungen/ksig.png}
-\end{frame}
-
 \begin{frame}{Digitale Signatur und Verschlüsselung I}
 \protect\hypertarget{digitale-signatur-und-verschluxfcsselung-i}{}
 \begin{itemize}
-\tightlist
 \item
   Pendant der schriftlichen Signatur
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Dokument → Erklärung, Vereinbarung
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Nachweis
 
@@ -158,24 +139,13 @@ Ruggero Susella}
   \item
     Verifikation (Empfänger)
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Signatur ausschließlich durch Unterzeichner
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
-  Verifikation soll jedem möglich sein\footnote<.->{Hühnlein and Korte
-    (2006)}
+  Verifikation soll jedem möglich sein
 \end{itemize}
+
+siehe (Hühnlein and Korte 2006)
 \end{frame}
 
 \begin{frame}{Digitale Signatur und Verschlüsselung II}
@@ -190,10 +160,12 @@ Ruggero Susella}
 \item
   Algorithmus zur Signaturverifikation
 \item
-  Signaturprozess\\
-  → Formatierung der Daten in signierbare Nachrichten\\
+  Signatur Schema (signature scheme) → Erzeugung \& Verifikation
 \item
-  Verfikationsprozess\footnote<.->{Katz et al. (1996)}
+  Signaturprozess → Formatierung der Daten in signierbare Nachrichten
+\item
+  Verfikationsprozess\\
+  siehe Katz et al. (1996)
 \end{enumerate}
 \end{frame}
 
@@ -219,8 +191,8 @@ Ruggero Susella}
     Verifikation (Message, Signatur, K\textsubscript{Pub})
   \end{itemize}
 \item
-  K\textsubscript{Pub} in öffentlichem Verzeichnis\footnote<.->{Hühnlein
-    and Korte (2006)}
+  K\textsubscript{Pub} in öffentlichem Verzeichnis\\
+  siehe (Hühnlein and Korte 2006)
 \end{itemize}
 \end{frame}
 
@@ -252,7 +224,6 @@ Ruggero Susella}
 \begin{frame}{ECDSA \& Ed25519}
 \protect\hypertarget{ecdsa-ed25519}{}
 \begin{itemize}
-\tightlist
 \item
   Signaturverfahren basierend auf Eliptic Curve Cryptography (ECC)
 
@@ -261,38 +232,26 @@ Ruggero Susella}
   \item
     Basis ist eine Punktruppe einer Elliptischen Kurve
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
 \item
   ECDSA ist verbereitet
 
-  \pause
-
   \begin{itemize}
-  \tightlist
   \item
     EdDSA (Edwardscurve)
-  \end{itemize}
-
-  \pause
-
-  \begin{itemize}
-  \tightlist
   \item
     Ed25519 (Edwardscurve 25519)
   \end{itemize}
-
-  \pause
 \item
   160bit ECC Schlüssel = 1200bit RSA Schlüssel
 
-  \pause
-\item
-  Speicherverbrauch, Energieverbrauch (IoT)(Hühnlein and Korte 2006)
+  \begin{itemize}
+  \tightlist
+  \item
+    Speicherverbrauch, Energieverbrauch (IoT)
+  \end{itemize}
 \end{itemize}
+
+siehe (Hühnlein and Korte 2006; Susella 2018)
 \end{frame}
 
 \begin{frame}{ECDSA \& Ed25519}
@@ -300,7 +259,7 @@ Ruggero Susella}
 \begin{itemize}
 \tightlist
 \item
-  Verwendung\footnote<.->{Susella (2018)}
+  Verwendung (Susella 2018)
 
   \begin{itemize}
   \tightlist
@@ -320,8 +279,8 @@ Ruggero Susella}
 \includegraphics[width=\textwidth,height=0.5\textheight]{Abbildungen/openssh.png}
 \end{frame}
 
-\begin{frame}{Signatur mit Ed25519 (Funktionsweise)}
-\protect\hypertarget{signatur-mit-ed25519-funktionsweise}{}
+\begin{frame}{Ed25519 Funktionsweise}
+\protect\hypertarget{ed25519-funktionsweise}{}
 \textbf{Tafelbild}
 \end{frame}
 
@@ -355,12 +314,14 @@ Ruggero Susella}
     SHA-2 Familie (SHA256,SHA512) → Bitlänge des Hash
   \end{itemize}
 \item
-  Auxiliary Schlüssel b\footnote<.->{Susella (2018)}
+  Auxiliary Schlüssel b
 \end{itemize}
 
 \begin{verbatim}
 Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \end{verbatim}
+
+(Susella 2018)
 \end{frame}
 
 \begin{frame}{Secure Hash ``SHA512'' II}
@@ -371,18 +332,12 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \begin{frame}{Secure Hash ``SHA512'' III}
 \protect\hypertarget{secure-hash-sha512-iii}{}
 \begin{itemize}
-\tightlist
 \item
   Ausgabe 512 Bit
-\end{itemize}
-
-\pause
-
-\begin{itemize}
+\item
+  Größe des internen Status 512 Bit
 \item
   Message expansion auf 80 schedulde words
-
-  \pause
 
   \begin{itemize}
   \item
@@ -395,37 +350,23 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
       Wortgröße von 64 Bit
     \end{itemize}
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   80 mal Rundenfunktion auf schedule words
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Operationen auf Status
 \end{itemize}
+
+(Susella 2018)
 \end{frame}
 
 \begin{frame}{Übergabewerte für SHA512}
 \protect\hypertarget{uxfcbergabewerte-fuxfcr-sha512}{}
 \begin{itemize}
 \item
-  Wörter 0-3 = Private Auxillary Key (\textbf{b})
+  Wörter 0-3 = Private Key (256 Bit)
 \item
-  Wörter 4-15 = Message\footnote<.->{Susella (2018)}
+  Wörter 4-15 = Message
 \end{itemize}
-
-\[ \sigma\  =\ lineare\ Transformation \]
-
-\[ \omega\ =\ message\ schedule\ word \]
 \end{frame}
 
 \begin{frame}{}
@@ -535,12 +476,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     Energieverbrauch eines SOCs
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Angriff bei Berechnung des ``flüchtigen'' privaten Schlüssels
 
@@ -549,12 +484,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     von Interesse ist Hilfschlüssel b
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Flüchtiger Schlüssel r bekannt
 
@@ -571,45 +500,28 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \begin{itemize}
 \tightlist
 \item
-  Differential Power Analysis (DPA) → Abhängigkeit Daten und
-  Energieverbrauch
+  Differential Power Analysis (DPA)
 
   \begin{itemize}
   \tightlist
   \item
+    SDA → Abhängigkeit Daten und Energieverbrauch
+  \item
     Energieverbrauch an einem Punkt der Encryption
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Zwischenwert (Intermediate Value)
 
   \begin{itemize}
   \tightlist
   \item
-    Value mit bekanntem Teil = Message
+    Value mit bekanntem Teil/Message
   \item
     Wert als Funktion darstellbar
   \end{itemize}
 \end{itemize}
 
-\pause
-
 \[ S(M,k) = Value \]
-\end{frame}
-
-\begin{frame}{Angriff auf Ed25519 II}
-\protect\hypertarget{angriff-auf-ed25519-ii-1}{}
-\includegraphics{Abbildungen/msw.png}
-\end{frame}
-
-\begin{frame}{Angriff auf Ed25519 II}
-\protect\hypertarget{angriff-auf-ed25519-ii-2}{}
-\includegraphics{Abbildungen/msw_recover.png}
 \end{frame}
 
 \begin{frame}{Angriff auf Ed25519 III}
@@ -624,12 +536,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     2\textsuperscript{64} mögliche Schlüssel
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Divide-and-Conquer Strategie
 
@@ -640,22 +546,11 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \end{itemize}
 \end{itemize}
 
-\pause
-
 \includegraphics[width=\textwidth,height=0.6\textheight]{Abbildungen/keyDPA.png}
 
-\pause
-
 \begin{itemize}
-\tightlist
 \item
   Hamming Weight wird berechnet (Anzahl Traces X Key Kandidaten)
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Pearson Korrelation der Zeit (Time Samples, Hamming Weight )
 \end{itemize}
@@ -664,11 +559,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \begin{frame}{Angriff auf Ed25519 IIII}
 \protect\hypertarget{angriff-auf-ed25519-iiii}{}
 \includegraphics[width=\textwidth,height=0.95\textheight]{Abbildungen/cvDPA.png}
-\end{frame}
-
-\begin{frame}{Angriff auf Ed25519 IIII}
-\protect\hypertarget{angriff-auf-ed25519-iiii-1}{}
-\includegraphics[width=\textwidth,height=0.95\textheight]{Abbildungen/Erfolg.png}
 \end{frame}
 
 \begin{frame}{}
@@ -684,15 +574,8 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \begin{frame}{Verbesserung \& Gegenmaßnahmen}
 \protect\hypertarget{verbesserung-gegenmauxdfnahmen}{}
 \begin{itemize}
-\tightlist
 \item
   Schlüssel \& Nachricht nicht gemeinsam in Kompressionsfunktion
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Padding bereits bei Schlüssel durchführen
 
@@ -701,12 +584,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     Random Werte
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Vorteil
 
@@ -717,12 +594,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     Implemetierung des SHA wird geändert
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   Nachteil für IoT
 
@@ -739,39 +610,15 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \begin{frame}{IN A NUTSHELL}
 \protect\hypertarget{in-a-nutshell}{}
 \begin{itemize}
-\tightlist
 \item
   Signaturerzeugung
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
   geheime Schlüssel errechnen
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
-  Schwachstelle = ``fahrlässige'' \textbf{Implementierung} des SHA512
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
+  Schwachstelle = ``fahrlässige'' \textbf{Implemetierung} des SHA512
 \item
   Fehlerhafte Implementierung → leichte Gegenmaßnahme
 \end{itemize}
-\end{frame}
-
-\begin{frame}{}
-\protect\hypertarget{section-25}{}
-\includegraphics{Abbildungen/klsig.png}
 \end{frame}
 
 \begin{frame}{Literatur}

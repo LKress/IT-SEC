@@ -18,9 +18,11 @@
     SHA-2 Familie (SHA256,SHA512) → Bitlänge des Hash
   \end{itemize}
 \item
-  Auxiliary Schlüssel b\footnote<.->{Susella (2018)}
+  Auxiliary Schlüssel b
 \end{itemize}
 
 \begin{verbatim}
 Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \end{verbatim}
+
+(Susella 2018)
