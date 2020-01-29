@@ -1,54 +1,26 @@
-\frametitle{Angriff auf Ed25519 III}
-\protect\hypertarget{angriff-auf-ed25519-iii}{}
+\frametitle{Secure Hash ``SHA512''}
+\protect\hypertarget{secure-hash-sha512}{}
 \begin{itemize}
-\tightlist
 \item
-  64 bit unbekannte Bits
+  Ed25519 nutzt SHA512
 
   \begin{itemize}
   \tightlist
   \item
-    2\textsuperscript{64} mögliche Schlüssel
-  \end{itemize}
-\end{itemize}
+    Merkle--Damgård Konstruktion
 
-\pause
-
-\begin{itemize}
-\tightlist
-\item
-  Divide-and-Conquer Strategie
-
-  \begin{itemize}
-  \tightlist
+    \begin{itemize}
+    \tightlist
+    \item
+      Erweiterung um Davies-Meyer
+    \end{itemize}
   \item
-    8 Bit → 256 mögliche Schlüssel
+    SHA-2 Familie (SHA256,SHA512) → Bitlänge des Hash
   \end{itemize}
-\end{itemize}
-
-\pause
-
-\includegraphics[width=\textwidth,height=0.6\textheight]{Abbildungen/keyDPA.png}
-
-\pause
-
-\begin{itemize}
-\tightlist
 \item
-  Hamming Weight wird berechnet (Anzahl Traces X Key Kandidaten)
-\end{itemize}
-
-\pause
-
-\begin{itemize}
-\tightlist
-\item
-  Pearson Korrelation der Zeit (Time Samples, Hamming Weight )
+  Auxiliary Schlüssel b\footnote<.->{Susella (2018)}
 \end{itemize}
 
 \begin{verbatim}
-Zu jedem Schlüssel Kandidaten muss jedes
-Time sample eines Traces zugeordnet werden
-→ korrekte Ausrichtung für jeden Schlüssel
-→ Vergleichbarkeit
+Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \end{verbatim}

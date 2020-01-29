@@ -3,7 +3,7 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-  10pt,
+  11 pt,
   ignorenonframetext,
   aspectratio=43,
 ]{beamer}
@@ -190,9 +190,8 @@ Ruggero Susella}
 \item
   Algorithmus zur Signaturverifikation
 \item
-  Signatur Schema (signature scheme) → Erzeugung \& Verifikation
-\item
-  Signaturprozess → Formatierung der Daten in signierbare Nachrichten
+  Signaturprozess\\
+  → Formatierung der Daten in signierbare Nachrichten\\
 \item
   Verfikationsprozess\footnote<.->{Katz et al. (1996)}
 \end{enumerate}
@@ -290,14 +289,15 @@ Ruggero Susella}
 \item
   160bit ECC Schlüssel = 1200bit RSA Schlüssel
 
+  \pause
+
   \begin{itemize}
   \tightlist
   \item
-    Speicherverbrauch, Energieverbrauch (IoT)
+    Speicherverbrauch, Energieverbrauch (IoT)\footnote<.->{Hühnlein and
+      Korte (2006)}
   \end{itemize}
 \end{itemize}
-
-siehe (Hühnlein and Korte 2006; Susella 2018)
 \end{frame}
 
 \begin{frame}{ECDSA \& Ed25519}
@@ -325,8 +325,8 @@ siehe (Hühnlein and Korte 2006; Susella 2018)
 \includegraphics[width=\textwidth,height=0.5\textheight]{Abbildungen/openssh.png}
 \end{frame}
 
-\begin{frame}{Ed25519 Funktionsweise}
-\protect\hypertarget{ed25519-funktionsweise}{}
+\begin{frame}{Signatur mit Ed25519 (Funktionsweise)}
+\protect\hypertarget{signatur-mit-ed25519-funktionsweise}{}
 \textbf{Tafelbild}
 \end{frame}
 
@@ -384,14 +384,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \pause
 
 \begin{itemize}
-\tightlist
-\item
-  Größe des internen Status 512 Bit
-\end{itemize}
-
-\pause
-
-\begin{itemize}
 \item
   Message expansion auf 80 schedulde words
 
@@ -401,22 +393,19 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \item
     Messageblock 1024 Bit
 
-    \pause
-
     \begin{itemize}
-    \tightlist
     \item
       16 Wörter
-    \end{itemize}
-
-    \pause
-
-    \begin{itemize}
-    \tightlist
     \item
       Wortgröße von 64 Bit
     \end{itemize}
   \end{itemize}
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
 \item
   80 mal Rundenfunktion auf schedule words
 \end{itemize}
@@ -427,14 +416,6 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \tightlist
 \item
   Operationen auf Status
-
-  \begin{itemize}
-  \tightlist
-  \item
-    AND / XOR
-  \item
-    Addition (mod 2\textsuperscript{64})
-  \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -442,10 +423,14 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \protect\hypertarget{uxfcbergabewerte-fuxfcr-sha512}{}
 \begin{itemize}
 \item
-  Wörter 0-3 = Private Key (256 Bit)
+  Wörter 0-3 = Private Auxillary Key (\textbf{b})
 \item
   Wörter 4-15 = Message\footnote<.->{Susella (2018)}
 \end{itemize}
+
+\[ \sigma\  =\ lineare\ Transformation \]
+
+\[ \omega\ =\ message\ schedule\ word \]
 \end{frame}
 
 \begin{frame}{}
@@ -591,12 +576,11 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \begin{itemize}
 \tightlist
 \item
-  Differential Power Analysis (DPA)
+  Differential Power Analysis (DPA) → Abhängigkeit Daten und
+  Energieverbrauch
 
   \begin{itemize}
   \tightlist
-  \item
-    SDA → Abhängigkeit Daten und Energieverbrauch
   \item
     Energieverbrauch an einem Punkt der Encryption
   \end{itemize}
@@ -612,7 +596,7 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
   \begin{itemize}
   \tightlist
   \item
-    Value mit bekanntem Teil/Message
+    Value mit bekanntem Teil = Message
   \item
     Wert als Funktion darstellbar
   \end{itemize}
@@ -623,7 +607,17 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \[ S(M,k) = Value \]
 \end{frame}
 
-\begin{frame}[fragile]{Angriff auf Ed25519 III}
+\begin{frame}{Angriff auf Ed25519 II}
+\protect\hypertarget{angriff-auf-ed25519-ii-1}{}
+\includegraphics{Abbildungen/msw.png}
+\end{frame}
+
+\begin{frame}{Angriff auf Ed25519 II}
+\protect\hypertarget{angriff-auf-ed25519-ii-2}{}
+\includegraphics{Abbildungen/msw_recover.png}
+\end{frame}
+
+\begin{frame}{Angriff auf Ed25519 III}
 \protect\hypertarget{angriff-auf-ed25519-iii}{}
 \begin{itemize}
 \tightlist
@@ -670,18 +664,16 @@ Message M (Länge n) → SHA512 Funktion → 512 Bit Ausgabe
 \item
   Pearson Korrelation der Zeit (Time Samples, Hamming Weight )
 \end{itemize}
-
-\begin{verbatim}
-Zu jedem Schlüssel Kandidaten muss jedes    
-Time sample eines Traces zugeordnet werden    
-→ korrekte Ausrichtung für jeden Schlüssel  
-→ Vergleichbarkeit
-\end{verbatim}
 \end{frame}
 
 \begin{frame}{Angriff auf Ed25519 IIII}
 \protect\hypertarget{angriff-auf-ed25519-iiii}{}
 \includegraphics[width=\textwidth,height=0.95\textheight]{Abbildungen/cvDPA.png}
+\end{frame}
+
+\begin{frame}{Angriff auf Ed25519 IIII}
+\protect\hypertarget{angriff-auf-ed25519-iiii-1}{}
+\includegraphics[width=\textwidth,height=0.95\textheight]{Abbildungen/Erfolg.png}
 \end{frame}
 
 \begin{frame}{}
@@ -770,7 +762,7 @@ Time sample eines Traces zugeordnet werden
 \begin{itemize}
 \tightlist
 \item
-  Schwachstelle = ``fahrlässige'' \textbf{Nutzung} des SHA512
+  Schwachstelle = ``fahrlässige'' \textbf{Implementierung} des SHA512
 \end{itemize}
 
 \pause
